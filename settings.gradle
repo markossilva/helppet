@@ -1,0 +1,15 @@
+rootProject.name = rootDir.name
+
+def toProject(dir) {
+    String projectName = ':' + dir.name;
+    include projectName;
+    project(projectName).projectDir = dir
+}
+
+def subDirs = rootDir.listFiles(new FileFilter() {
+    public boolean accept(File file) {
+        return file.isDirectory() && new File(file, 'build.gradle').isFile()
+    }
+})
+
+subDirs.each { File dir -> toProject(dir) }

@@ -1,0 +1,14 @@
+server:
+  port: 9000
+
+security:
+  jwt:
+    key-store: classpath:keyStore.jks
+    key-store-password: Ma@29091994
+    key-pair-alias: mydomain
+    key-pair-password: Ma@29091994
+
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
