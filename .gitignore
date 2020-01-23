@@ -2,3 +2,8 @@
 build
 .idea
 *.jks
+.vscode
+bin
+.project
+.classpath
+.settings
